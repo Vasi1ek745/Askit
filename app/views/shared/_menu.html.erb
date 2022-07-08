@@ -1,0 +1,21 @@
+   <%=  provide :main_menu do %>
+   
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid d-flex justify-content-between d-flex justify-content-end">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+            <li class="nav-item">
+              <%= nav_tab 'HomePage', root_path, class: "nav-link  " , current_page: current_page %>
+            </li>
+            <li class="nav-item">
+              <%= nav_tab 'All Questions', questions_path, class: "nav-link ", current_page: current_page %>
+            </li>
+            <li class="nav-item">
+              <%= nav_tab 'New Question', new_question_path , class: "nav-link " , current_page: current_page  %>
+            </li>
+        </ul>
+
+        
+      </div>
+    </nav>
+    <% end%>
