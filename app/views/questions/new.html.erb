@@ -1,2 +1,7 @@
-<h1>Questions#new</h1>
-<p>Find me in app/views/questions/new.html.erb</p>
+ <% provide :page_title, "New Question"%>
+  <%= currently_at "New Question" %>
+<div class = "m-3 me-4 border border-2 shadow">
+    <h1 class = "m-3">New Questions</h1>
+
+    <%= render 'questions_new_form' %>
+</div>

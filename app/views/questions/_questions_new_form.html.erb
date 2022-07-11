@@ -1,0 +1,15 @@
+<div class = "m-3">
+    <%= form_with model: @question do |form| %>
+        <div class="input-group mb-2 ">
+            <%= form.label "title", class: "input-group-text pe-3" %>
+            <%= form.text_field :title, class:"form-control",required: true, minlength: 2,  placeholder:"Title" %>
+        </div>
+        <div class="input-group mt-2 ">
+            <%= form.label "body" , class:"input-group-text" %>
+            <%= form.text_area :body, class:"form-control", placeholder:"body" ,required: true, minlength: 2  %>
+        </div>
+        <div >
+            <%= form.submit "create!" , class:"mt-3 btn btn-outline-dark" %>
+        </div>
+    <% end %>
+</div>

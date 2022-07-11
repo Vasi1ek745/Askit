@@ -1,2 +1,9 @@
-<h1>Questions#edit</h1>
-<p>Find me in app/views/questions/edit.html.erb</p>
+ <% provide :page_title, "Edit"%>
+<%= currently_at "Edit" %>
+
+
+<div class = "m-3 me-4 border border-2 shadow">
+    <h1 class = "m-3">Edit Questions</h1>
+
+    <%= render 'questions_new_form' %>
+</div>

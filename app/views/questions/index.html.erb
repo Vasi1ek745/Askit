@@ -11,8 +11,11 @@
             <p> <%= question.body %><p>
             <p> <%= link_to 'Show', question_path(question.id), class: "btn btn-outline-primary btn-sm" %>
             <%= link_to 'Edit', edit_question_path(question.id), class: "btn btn-outline-secondary btn-sm" %>
-            <%= link_to 'Delete', question_path(question.id) , method: :delete,  data: {confirm: "Are you sure?"} , class: "btn btn-outline-dark btn-sm" %>
-            </p>   
+            <%= form_with url: "/questions/#{question.id}", method: :delete do |form| %>
+             <%=    form.submit "Delete", class: "btn btn-outline-dark btn-sm",
+              onclick: "return confirmDestroy('Are you sure want destroy this post?')"  %>
+            <% end %>
+  
     </div>
 
     <% end %>

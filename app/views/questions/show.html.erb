@@ -1,2 +1,16 @@
-<h1>Questions#show</h1>
-<p>Find me in app/views/questions/show.html.erb</p>
+ <% provide :page_title, "Show question"%>
+  <%= currently_at %>
+<!-- Отображенеи вопросов -->
+<div class = "m-3 p-3 border border-3 shadow-3">
+    <h1><%= @question.title %></h1>
+    <p><%= @question.body %></p>
+</div>
+<!-- Отображенеи вопросов -->
+
+<!-- Отображенеи ответов -->
+<%# <%= render './answers/answers' %> %>
+<!-- Отображенеи ответов -->
+
+<!-- Форма для  ответов -->
+<%# <%= render './answers/answers_form' %> %>
+<!-- Форма для ответов-->
