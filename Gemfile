@@ -13,6 +13,8 @@ gem "cssbundling-rails"
 gem "jbuilder"
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
+gem "faker", "~> 2.21"
+gem "pagy", "~> 5.10"
 
 # Use Sass to process CSS
 # gem "sassc-rails"
@@ -45,4 +47,4 @@ group :test do
 end
 
 
-gem "faker", "~> 2.21"
+
