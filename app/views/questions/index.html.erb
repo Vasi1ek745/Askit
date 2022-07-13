@@ -9,12 +9,14 @@
             <p class="d-flex  bd-highlight ps-2 pt-2"> <%= question.created_at.getlocal.strftime("%d.%m.%y  %H:%M") %></p>
         </div>
             <p> <%= question.body %><p>
-            <p> <%= link_to 'Show', question_path(question.id), class: "btn btn-outline-primary btn-sm" %>
-            <%= link_to 'Edit', edit_question_path(question.id), class: "btn btn-outline-secondary btn-sm" %>
+            <div class = "d-flex flex-row  mb-3">
+             <%= link_to 'Show', question_path(question.id), class: "btn btn-outline-primary btn-sm " %>
+            <%= link_to 'Edit', edit_question_path(question.id), class: "btn btn-outline-secondary btn-sm mx-1" %>
             <%= form_with url: "/questions/#{question.id}", method: :delete do |form| %>
-             <%=    form.submit "Delete", class: "btn btn-outline-dark btn-sm",
-              onclick: "return confirmDestroy('Are you sure want destroy this post?')"  %>
+             <%=    form.submit "Delete", class: "btn btn-outline-dark btn-sm ",
+              onclick: "return confirmDestroy('Are you sure?')"  %>
             <% end %>
+           </div>
   
     </div>
 

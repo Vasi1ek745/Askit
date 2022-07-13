@@ -1,0 +1,20 @@
+<div class = "m-3 mb-0 p-3 border border-3 shadow-3">
+   <h3> <%= @answers.size %> answers </h3>
+</div>
+
+    <% @answers.each do |answer| %>
+<div class = "mx-3 mt-0 p-3 border border-3 shadow-3">
+    <p><%= answer.created_at.getlocal.strftime("%d.%m.%y  %H:%M") %> </p>
+    <h4><%= answer.body %></h4>
+    <div class = "d-flex flex-row  mb-3">
+     <%= link_to 'Edit', edit_question_answer_path(@question , answer) ,  class: "btn btn-outline-secondary btn-sm" %>
+    <%= form_with url: "/questions/#{@question.id}/answers/#{answer.id}", method: :delete do |form| %>
+    <%=    form.submit "Delete", class: "btn btn-outline-dark btn-sm ",
+              onclick: "return confirmDestroy('Are you sure?')"  %>
+    <% end %>
+    </div>
+</div>
+    <% end %>
+<div class= "m-2 p-2">
+  
+<div>
